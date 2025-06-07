@@ -6,7 +6,7 @@ import { registerUserSchema, loginUserSchema } from "./user.validation.js";
 
 const router = express.Router();
 
-router.post("/register", validate(registerUserSchema) registerUser);
+router.post("/register", validate(registerUserSchema), registerUser);
 router.post("/login", validate(loginUserSchema), loginUser);
 router.get("/me", authenticateToken, getCurrentUser);
 
