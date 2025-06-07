@@ -15,3 +15,92 @@
 2025-06-07T06:10:49.157Z info: Branch created: 3e12a3b4-4b1a-457d-9352-adc067fcbe0e in project f768e4a4-b2b4-4d78-9b00-ced5172c3f44
 2025-06-07T06:33:11.218Z info: 🚀 Server running on port 5001
 2025-06-07T06:54:44.104Z info: 🚀 Server running on port 5001
+2025-06-07T07:10:33.477Z info: 🚀 Server running on port 5001
+2025-06-07T11:30:38.243Z info: 🚀 Server running on port 5001
+2025-06-07T11:34:04.047Z error: TypeError: Cannot destructure property 'ref' of 'payload' as it is undefined.
+    at Module.processPushEvent (file:///Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/src/modules/webhook/webhook.service.js:5:11)
+    at handleGitWebhook (file:///Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/src/modules/webhook/webhook.controller.js:6:34)
+    at Layer.handleRequest (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/route.js:157:13)
+    at jsonParser (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/body-parser/lib/types/json.js:109:7)
+    at Layer.handleRequest (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/layer.js:152:17)
+2025-06-07T11:34:04.049Z error: TypeError: Cannot destructure property 'ref' of 'payload' as it is undefined.
+    at Module.processPushEvent (file:///Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/src/modules/webhook/webhook.service.js:5:11)
+    at handleGitWebhook (file:///Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/src/modules/webhook/webhook.controller.js:6:34)
+    at Layer.handleRequest (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/route.js:157:13)
+    at jsonParser (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/body-parser/lib/types/json.js:109:7)
+    at Layer.handleRequest (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/layer.js:152:17)
+2025-06-07T11:35:53.502Z info: 🚀 Server running on port 5001
+2025-06-07T11:37:44.250Z error: ReferenceError: logger is not defined
+    at Module.processPushEvent (file:///Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/src/modules/webhook/webhook.service.js:5:3)
+    at handleGitWebhook (file:///Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/src/modules/webhook/webhook.controller.js:6:34)
+    at Layer.handleRequest (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/route.js:157:13)
+    at jsonParser (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/body-parser/lib/types/json.js:109:7)
+    at Layer.handleRequest (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/layer.js:152:17)
+2025-06-07T11:37:44.251Z error: ReferenceError: logger is not defined
+    at Module.processPushEvent (file:///Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/src/modules/webhook/webhook.service.js:5:3)
+    at handleGitWebhook (file:///Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/src/modules/webhook/webhook.controller.js:6:34)
+    at Layer.handleRequest (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/route.js:157:13)
+    at jsonParser (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/body-parser/lib/types/json.js:109:7)
+    at Layer.handleRequest (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/layer.js:152:17)
+2025-06-07T11:38:11.880Z info: 🚀 Server running on port 5001
+2025-06-07T11:38:25.622Z info: Processing push event
+2025-06-07T11:38:25.622Z info: undefined
+2025-06-07T11:38:25.623Z error: TypeError: Cannot destructure property 'ref' of 'payload' as it is undefined.
+    at Module.processPushEvent (file:///Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/src/modules/webhook/webhook.service.js:8:11)
+    at handleGitWebhook (file:///Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/src/modules/webhook/webhook.controller.js:6:34)
+    at Layer.handleRequest (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/route.js:157:13)
+    at jsonParser (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/body-parser/lib/types/json.js:109:7)
+    at Layer.handleRequest (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/layer.js:152:17)
+2025-06-07T11:38:25.625Z error: TypeError: Cannot destructure property 'ref' of 'payload' as it is undefined.
+    at Module.processPushEvent (file:///Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/src/modules/webhook/webhook.service.js:8:11)
+    at handleGitWebhook (file:///Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/src/modules/webhook/webhook.controller.js:6:34)
+    at Layer.handleRequest (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/route.js:157:13)
+    at jsonParser (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/body-parser/lib/types/json.js:109:7)
+    at Layer.handleRequest (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/node_modules/router/lib/layer.js:152:17)
+2025-06-07T11:40:22.706Z info: Processing push event
+2025-06-07T11:40:22.706Z info: [object Object]
+2025-06-07T11:40:22.755Z error: Error: No matching project for webhook repo
+    at Module.processPushEvent (file:///Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/src/modules/webhook/webhook.service.js:16:23)
+    at async handleGitWebhook (file:///Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/src/modules/webhook/webhook.controller.js:6:20)
+2025-06-07T11:40:22.755Z error: Error: No matching project for webhook repo
+    at Module.processPushEvent (file:///Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/src/modules/webhook/webhook.service.js:16:23)
+    at async handleGitWebhook (file:///Users/mbanyickjoof/Dev/workspace/projects/LUT/verde-flow/verde-flow-api/src/modules/webhook/webhook.controller.js:6:20)
+2025-06-07T11:41:25.509Z info: 🚀 Server running on port 5001
+2025-06-07T11:42:06.893Z info: User registered: jmbanyick@gmail.com
+2025-06-07T11:42:13.027Z info: User logged in: jmbanyick@gmail.com
+2025-06-07T11:42:47.560Z info: Project created by user 56adccf0-0fcd-4860-a420-79e17742f389: b36ce48e-8110-40ab-98dc-7f052f950ee6
+2025-06-07T11:43:28.503Z info: Branch created: 59ed8749-a8db-4a1b-914d-d6fdf0f55b86 in project b36ce48e-8110-40ab-98dc-7f052f950ee6
+2025-06-07T11:43:41.620Z info: Processing push event
+2025-06-07T11:43:41.620Z info: [object Object]
+2025-06-07T11:43:41.630Z info: Webhook processed: 1 commits
+2025-06-07T11:46:15.274Z info: 🚀 Server running on port 5001
