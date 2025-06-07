@@ -22,29 +22,49 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  projects  Project[]
+  projects Project[]
 }
 
 model Project {
-  id             String   @id @default(uuid())
-  name           String
-  gitUrl         String
-  gitToken       String?
-  defaultBranch  String   @default("main")
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
+  id            String   @id @default(uuid())
+  name          String
+  gitUrl        String
+  gitToken      String?
+  defaultBranch String   @default("main")
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
 
-  ownerId        String
-  owner          User     @relation(fields: [ownerId], references: [id])
-  branches       Branch[]
+  ownerId  String
+  owner    User     @relation(fields: [ownerId], references: [id])
+  branches Branch[]
 }
 
 model Branch {
-  id         String   @id @default(uuid())
-  name       String
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
+  id        String   @id @default(uuid())
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
-  projectId  String
-  project    Project  @relation(fields: [projectId], references: [id])
+  projectId   String
+  project     Project       @relation(fields: [projectId], references: [id])
+  measurements Measurement[]
+}
+
+model Measurement {
+  id           String  @id @default(uuid())
+  commitId     String
+  branchId     String
+  apiPath      String
+  httpMethod   String
+  apiRequestId String?
+
+  energyJoules Float
+  cpuPercent   Float
+  memoryMB     Float
+  latencyMs    Float
+  timestamp    DateTime @default(now())
+
+  branch Branch @relation(fields: [branchId], references: [id])
+  // Optional future relations:
+  // apiRequest APIRequest? @relation(fields: [apiRequestId], references: [id])
 }
