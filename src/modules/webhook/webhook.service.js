@@ -1,7 +1,10 @@
 import { createOrGetCommit } from "../commit/commit.service.js";
 import prisma from "../../config/db.js";
+import logger from "../../utils/logger.js";
 
 export async function processPushEvent(payload) {
+  logger.info("Processing push event");
+  logger.info(payload);
   const { ref, commits, repository } = payload;
   const branchName = ref.replace("refs/heads/", "");
 
@@ -10,7 +13,10 @@ export async function processPushEvent(payload) {
     include: { branches: true },
   });
 
-  if (!project) throw new Error("No matching project for webhook repo");
+  if (!project)
+    throw new Error(
+      `No matching project for webhook repo ${repository.clone_url}`
+    );
 
   const branch = project.branches.find(b => b.name === branchName);
   if (!branch) throw new Error(`Branch '${branchName}' not found in project`);
