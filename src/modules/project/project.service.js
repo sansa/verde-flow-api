@@ -53,6 +53,14 @@ export async function getProjectsByUser(userId) {
 export async function getProjectById(userId, projectId) {
   const project = await prisma.project.findUnique({
     where: { id: projectId },
+    include: {
+      _count: {
+        select: {
+          branches: true,
+          apiRequests: true,
+        },
+      },
+    },
   });
   if (!project || project.ownerId !== userId) {
     throw new Error("Project not found or unauthorized");
