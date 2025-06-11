@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import swaggerUi from "swagger-ui-express";
 import swaggerSpec from "./config/swagger.config.js";
 
+import apiRoutes from "./modules/api-request/api-request.routes.js";
 import branchRoutes from "./modules/branch/branch.routes.js";
 import commitRoutes from "./modules/commit/commit.routes.js";
 import measurementRoutes from "./modules/measurement/measurement.routes.js";
@@ -25,6 +26,7 @@ app.get("/", (req, res) => {
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
+app.use("/api/requests", apiRoutes);
 app.use("/api/branches", branchRoutes);
 app.use("/api/commits", commitRoutes);
 app.use("/api/measurements", measurementRoutes);
