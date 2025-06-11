@@ -10,9 +10,42 @@ export async function createProject(userId, data) {
 }
 
 export async function getProjectsByUser(userId) {
-  return prisma.project.findMany({
+  const projects = await prisma.project.findMany({
     where: { ownerId: userId },
+    include: {
+      branches: {
+        include: {
+          measurements: {
+            select: { timestamp: true },
+            orderBy: { timestamp: "desc" },
+            take: 1,
+          },
+        },
+      },
+      _count: {
+        select: {
+          branches: true,
+        },
+      },
+    },
     orderBy: { createdAt: "desc" },
+  });
+  return projects.map(project => {
+    const allMeasurements = project.branches.flatMap(b => b.measurements);
+    const lastMeasured =
+      allMeasurements.sort((a, b) => b.timestamp - a.timestamp)[0]?.timestamp ??
+      null;
+
+    return {
+      id: project.id,
+      name: project.name,
+      description:
+        project.description || "This is a sample API to test Verde Flow",
+      branchCount: project._count.branches,
+      totalApis: 0,
+      lastMeasured: lastMeasured || "Not Yet Measured",
+      status: project.status || "Active",
+    };
   });
 }
 
