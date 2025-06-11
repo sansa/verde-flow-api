@@ -1,4 +1,4 @@
-import * as service from "./apiRequest.service.js";
+import * as service from "./api-request.service.js";
 
 export async function createApiRequest(req, res, next) {
   try {

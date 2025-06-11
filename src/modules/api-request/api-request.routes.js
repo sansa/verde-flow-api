@@ -5,7 +5,7 @@ import {
   getApiRequestById,
   updateApiRequest,
   deleteApiRequest,
-} from "./apiRequest.controller.js";
+} from "./api-request.controller.js";
 
 import authenticateToken from "../../middleware/auth.middleware.js";
 import { validate } from "../../middleware/zod.middleware.js";
