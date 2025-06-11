@@ -1,6 +1,7 @@
 import prisma from "../../config/db.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
+import { generateAccessToken, generateRefreshToken } from "../../utils/jwt.js";
 
 const SALT_ROUNDS = 10;
 const JWT_SECRET = process.env.JWT_SECRET || "supersecret";
@@ -23,8 +24,22 @@ export async function loginUser({ email, password }) {
   const match = await bcrypt.compare(password, user.password);
   if (!match) throw new Error("Invalid credentials");
 
-  const token = jwt.sign({ id: user.id }, JWT_SECRET, { expiresIn: "1d" });
-  return token;
+  const payload = { id: user.id, email: user.email };
+  const accessToken = generateAccessToken(payload);
+  const refreshToken = generateRefreshToken(payload);
+
+  return {
+    user: {
+      id: user.id,
+      name: user.name,
+      email: user.email,
+    },
+    tokens: {
+      accessToken,
+      refreshToken,
+    },
+    abilityRules: [{ action: "manage", subject: "all" }],
+  };
 }
 
 export async function getUserById(id) {

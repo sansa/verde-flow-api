@@ -1,5 +1,10 @@
 import * as userService from "./user.service.js";
 import logger from "../../utils/logger.js";
+import {
+  ErrorType,
+  ErrorCode,
+  SuccessCode,
+} from "../../middleware/error.handler.js";
 
 export async function registerUser(req, res, next) {
   try {
@@ -13,11 +18,16 @@ export async function registerUser(req, res, next) {
 
 export async function loginUser(req, res, next) {
   try {
-    const token = await userService.loginUser(req.body);
+    const authData = await userService.loginUser(req.body);
     logger.info(`User logged in: ${req.body.email}`);
-    res.json({ token });
+    res.json(authData);
   } catch (err) {
-    next(err);
+    throw {
+      message: err.message,
+      statusCode: 401,
+      type: ErrorType.APPLICATION,
+      code: ErrorCode.INVALID_CREDENTIALS,
+    };
   }
 }
 
