@@ -30,15 +30,18 @@ model Project {
   name          String
   gitUrl        String
   gitToken      String?
-  status        String?
+  status        String?  @default("Active")
   description   String?
   defaultBranch String   @default("main")
+  baseUrl       String?
+  authToken     String?
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
 
-  ownerId  String
-  owner    User     @relation(fields: [ownerId], references: [id])
-  branches Branch[]
+  ownerId     String
+  owner       User         @relation(fields: [ownerId], references: [id])
+  branches    Branch[]
+  apiRequests APIRequest[]
 }
 
 model Branch {
@@ -67,10 +70,10 @@ model Measurement {
   latencyMs    Float
   timestamp    DateTime @default(now())
 
-  branch Branch @relation(fields: [branchId], references: [id])
+  branch       Branch      @relation(fields: [branchId], references: [id])
   // Optional future relations:
-  // apiRequest APIRequest? @relation(fields: [apiRequestId], references: [id])
-  commit Commit? @relation(fields: [commitId], references: [id])
+  apiRequest APIRequest? @relation(fields: [apiRequestId], references: [id])
+  commit       Commit?     @relation(fields: [commitId], references: [id])
 }
 
 model Commit {
@@ -84,4 +87,26 @@ model Commit {
   branch      Branch   @relation(fields: [branchId], references: [id])
 
   measurements Measurement[]
+}
+
+model APIRequest {
+  id          String     @id @default(uuid())
+  method      HttpMethod
+  path        String
+  payload     Json?
+  description String?
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+
+  projectId    String
+  project      Project       @relation(fields: [projectId], references: [id])
+  measurements Measurement[]
+}
+
+enum HttpMethod {
+  GET
+  POST
+  PUT
+  DELETE
+  PATCH
 }
