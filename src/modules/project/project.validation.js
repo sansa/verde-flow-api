@@ -7,6 +7,8 @@ export const createProjectSchema = z.object({
   defaultBranch: z.string().optional(),
   description: z.string().optional(),
   status: z.string().optional(),
+  authToken: z.string().optional(),
+  baseUrl: z.string().optional(),
 });
 
 export const updateProjectSchema = z.object({
@@ -16,4 +18,6 @@ export const updateProjectSchema = z.object({
   defaultBranch: z.string().optional(),
   description: z.string().optional(),
   status: z.string().optional(),
+  authToken: z.string().optional(),
+  baseUrl: z.string().optional(),
 });

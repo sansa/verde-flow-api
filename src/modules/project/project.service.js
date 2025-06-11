@@ -25,6 +25,7 @@ export async function getProjectsByUser(userId) {
       _count: {
         select: {
           branches: true,
+          apiRequests: true,
         },
       },
     },
@@ -42,7 +43,7 @@ export async function getProjectsByUser(userId) {
       description:
         project.description || "This is a sample API to test Verde Flow",
       branchCount: project._count.branches,
-      totalApis: 0,
+      totalApis: project._count.apiRequests,
       lastMeasured: lastMeasured || "Not Yet Measured",
       status: project.status || "Active",
     };
